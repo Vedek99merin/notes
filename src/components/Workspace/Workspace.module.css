@@ -1,5 +1,25 @@
 .editor {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   padding: 20px;
   color: #000;
+}
+
+.nameInput {
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.contentInput {
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: Arial;
+  resize: none;
+  flex-grow: 1;
 }
