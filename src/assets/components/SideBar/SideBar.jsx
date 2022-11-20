@@ -1,23 +1,18 @@
 import { Note } from "../../../note.js";
 import { useState } from "react";
 import style from "./SideBar.module.css";
+import { useTasksStore } from "../../../store.js";
 
 function SideBar() {
-  const [notes, setNotes] = useState([
-    new Note(1, "Вынести мусор", "не вышло"),
-  ]);
+  const notes = useTasksStore((state) => state.tasks);
 
-  if (notes.length == 0) {
-    return (
-      <ul className={style.noteList}>
-        <li className="note active">
-          <h2>Заметку забыл создать ГОНДОН!</h2>
-        </li>
-      </ul>
-    );
-  }
-
-  return (
+  return notes.length === 0 ? (
+    <ul className={style.noteList}>
+      <li className={style.note}>
+        <h2>No tasks</h2>
+      </li>
+    </ul>
+  ) : (
     <ul className={style.noteList}>
       {notes.map((item) => (
         <li key={item.id} className={style.note}>
