@@ -1,6 +1,6 @@
 export const TrashIcon = ({ onClick, ...props }) => {
   return (
-    <a href="#" onClick={onClick}>
+    <a href="#" onClick={onClick} {...props}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
@@ -15,7 +15,7 @@ export const TrashIcon = ({ onClick, ...props }) => {
 
 export const EditIcon = ({ onClick, ...props }) => {
   return (
-    <a href="#" onClick={onClick}>
+    <a href="#" onClick={onClick} {...props}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"

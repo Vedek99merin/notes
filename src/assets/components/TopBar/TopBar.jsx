@@ -25,8 +25,8 @@ function TopBar() {
 
   return (
     <div className={style.topBar}>
-      <TrashIcon onClick={handleDelete} />
-      <EditIcon onClick={handleCreate} />
+      <TrashIcon onClick={handleDelete} className={style.actionButton} />
+      <EditIcon onClick={handleCreate} className={style.actionButton} />
     </div>
   );
 }
