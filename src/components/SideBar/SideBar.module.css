@@ -1,4 +1,7 @@
 .noteList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 40%;
   padding: 10px;
   border-right: 1px solid #ccc;
