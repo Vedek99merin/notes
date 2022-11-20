@@ -1,6 +1,7 @@
 import { useTasksStore } from "./store";
 import "./assets/styles/note.css";
 import { Workspace, SideBar, TopBar } from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const tasks = useTasksStore((state) => state.tasks);
@@ -10,7 +11,7 @@ function App() {
       <TopBar />
       <div className="note-container">
         <SideBar />
-        <Workspace />
+        <Outlet />
       </div>
     </div>
   );

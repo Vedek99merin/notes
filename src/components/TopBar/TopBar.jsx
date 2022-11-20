@@ -20,7 +20,7 @@ function TopBar() {
 
   const handleCreate = (e) => {
     e.preventDefault();
-    createTask("New task", "Type here...");
+    createTask("New task" + Date.now(), "Type here...");
   };
 
   return (

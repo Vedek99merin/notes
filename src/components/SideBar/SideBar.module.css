@@ -12,6 +12,7 @@
   transition: background-color 0.15s ease;
   border-radius: 4px;
   animation: noteSlideIn 0.15s forwards;
+  position: relative;
 }
 
 .note:hover {
@@ -22,6 +23,14 @@
 
 .noteList .note:not(:last-child) {
   margin-bottom: 14px;
+}
+
+.noteLink {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 @keyframes noteSlideIn {

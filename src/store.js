@@ -2,9 +2,12 @@ import create from 'zustand'
 import { Note } from './note'
 import { v4 as uuidv4 } from 'uuid';
 
-export const useTasksStore = create( ( set ) => ( {
+export const useTasksStore = create( ( set, get ) => ( {
   tasks: [],
   selectedTaskId: null,
+  getSelectedTask: () => {
+    return get().tasks.find( task => task.id === get().selectedTaskId )
+  },
   createTask: ( name, description ) => set( state => ( {
     tasks: [
       ...state.tasks,

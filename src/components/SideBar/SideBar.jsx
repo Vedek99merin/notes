@@ -1,5 +1,6 @@
 import style from "./SideBar.module.css";
 import { useTasksStore } from "../../store.js";
+import { Link } from "react-router-dom";
 
 function SideBar() {
   const notes = useTasksStore((state) => state.tasks);
@@ -16,6 +17,7 @@ function SideBar() {
         <li key={item.id} className={style.note}>
           <h2>{item.name}</h2>
           <p>{item.dateCreated.toLocaleDateString("en-US")}</p>
+          <Link to={`tasks/${item.id}`} className={style.noteLink} />
         </li>
       ))}
     </ul>
