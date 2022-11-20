@@ -1,4 +1,4 @@
-import { useTasksStore } from "../../../store";
+import { useTasksStore } from "../../store";
 import { TrashIcon, EditIcon } from "./icons";
 import style from "./TopBar.module.css";
 

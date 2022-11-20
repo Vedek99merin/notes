@@ -1,9 +1,6 @@
 import { useTasksStore } from "./store";
 import "./assets/styles/note.css";
-import TopBar from "./assets/components/TopBar/TopBar";
-import SideBar from "./assets/components/SideBar/SideBar";
-import Workspace from "./assets/components/Workspace/Workspace";
-import { Note } from "./note";
+import { Workspace, SideBar, TopBar } from "./components";
 
 function App() {
   const tasks = useTasksStore((state) => state.tasks);

@@ -1,7 +1,5 @@
-import { Note } from "../../../note.js";
-import { useState } from "react";
 import style from "./SideBar.module.css";
-import { useTasksStore } from "../../../store.js";
+import { useTasksStore } from "../../store.js";
 
 function SideBar() {
   const notes = useTasksStore((state) => state.tasks);
