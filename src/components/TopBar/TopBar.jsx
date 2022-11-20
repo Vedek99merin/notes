@@ -1,4 +1,5 @@
 import { useTasksStore } from "../../store";
+import Search from "../Search/Search";
 import { TrashIcon, EditIcon } from "./icons";
 import style from "./TopBar.module.css";
 
@@ -25,8 +26,12 @@ function TopBar() {
 
   return (
     <div className={style.topBar}>
-      <TrashIcon onClick={handleDelete} className={style.actionButton} />
-      <EditIcon onClick={handleCreate} className={style.actionButton} />
+      <Search />
+
+      <div className={style.actions}>
+        <TrashIcon onClick={handleDelete} className={style.actionButton} />
+        <EditIcon onClick={handleCreate} className={style.actionButton} />
+      </div>
     </div>
   );
 }
